@@ -24,5 +24,6 @@ func AssertNow(t *testing.T, condition bool, err string) {
 func AssertLength(t *testing.T, result int, expected int) {
 	if result != expected {
 		t.Log(fmt.Sprintf("wrong length: %d, expected: %d", result, expected))
+		t.FailNow()
 	}
 }
